@@ -1,4 +1,4 @@
-Just my own .bashrc additions.
+Just my own .bashrc.
 
 **Setup:**
 
