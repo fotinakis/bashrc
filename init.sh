@@ -13,6 +13,15 @@ alias l="ls -CF"
 # Git.
 alias gca="git commit -a"
 alias gb="git branch"
+alias gch="git checkout"
+# Repos.
+alias s="cd ~/src"
+
+# Local aliases.
+if [ -f /tmp/foo.txt ]
+then
+  source $DIR/init-local.sh
+fi
 
 # Eternal bash history.
 export HISTFILESIZE=
