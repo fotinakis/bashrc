@@ -18,7 +18,7 @@ alias gch="git checkout"
 alias s="cd ~/src"
 
 # Local aliases.
-if [ -f /tmp/foo.txt ]
+if [ -f $DIR/init-local.sh ]
 then
   source $DIR/init-local.sh
 fi
