@@ -18,6 +18,8 @@ alias la="ls -A"
 alias l="ls -CF"
 alias gr="egrep -r"
 alias brc="vim ~/src/bashrc/init.sh"
+alias brcl="vim ~/src/bashrc/init-local.sh"
+alias src="source ~/.bashrc"
 # Git.
 # Requires hub to be installed: https://github.com/github/hub
 # gem install hub; hub hub standalone > /usr/local/bin/hub; chmod +x /usr/local/bin/hub; gem uninstall hub;
@@ -37,10 +39,10 @@ alias sb="cd ~/src/bashrc"
 export HISTFILESIZE=
 export HISTSIZE=
 export HISTTIMEFORMAT="[%F %T] "
-# Change the file location because other bash sessions truncate .bash_history file upon close.
+# Change the file location because certain bash sessions truncate .bash_history file upon close.
 # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
 export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
-PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
