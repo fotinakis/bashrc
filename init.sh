@@ -28,6 +28,7 @@ alias gca="git commit -a"
 alias gb="git branch"
 alias gd="git diff"
 alias gch="git checkout"
+alias gpom="git pull origin master"
 # Common repos.
 alias s="cd ~/src"
 alias sb="cd ~/src/bashrc"
@@ -45,4 +46,7 @@ export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-
+stophistory () {
+  PROMPT_COMMAND="bash_prompt_command"
+  echo 'History recording stopped.'
+}
