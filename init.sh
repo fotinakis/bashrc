@@ -20,10 +20,8 @@ alias gr="egrep -r"
 alias brc="vim ~/src/bashrc/init.sh"
 alias brcl="vim ~/src/bashrc/init-local.sh"
 alias src="source ~/.bashrc"
+alias k="kill %%"
 # Git.
-# Requires hub to be installed: https://github.com/github/hub
-# gem install hub; hub hub standalone > /usr/local/bin/hub; chmod +x /usr/local/bin/hub; gem uninstall hub;
-alias git='hub'
 alias gca="git commit -a"
 alias gb="git branch"
 alias gd="git diff"
