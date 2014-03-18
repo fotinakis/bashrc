@@ -27,6 +27,7 @@ alias gb="git branch"
 alias gd="git diff"
 alias gch="git checkout"
 alias gpom="git pull origin master"
+alias gs="git status"
 # Common repos.
 alias s="cd ~/src"
 alias sb="cd ~/src/bashrc"
