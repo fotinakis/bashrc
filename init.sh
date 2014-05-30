@@ -52,3 +52,8 @@ stophistory () {
   PROMPT_COMMAND="bash_prompt_command"
   echo 'History recording stopped.'
 }
+
+# Setup ssh-agent.
+pgrep -f ssh-agent > /dev/null || ssh-agent > ~/.ssh/agent_config.sh
+eval `cat ~/.ssh/agent_config.sh`
+
