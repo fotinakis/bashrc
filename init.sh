@@ -53,7 +53,13 @@ stophistory () {
   echo 'History recording stopped.'
 }
 
+# Go path.
+export GOPATH=$HOME/go/
+export PATH=$PATH:$GOPATH/bin
+
 # Setup ssh-agent.
-pgrep -f ssh-agent > /dev/null || ssh-agent > ~/.ssh/agent_config.sh
-eval `cat ~/.ssh/agent_config.sh`
+if [[ $OSTYPE == 'linux-gnu' ]]; then
+  pgrep -f ssh-agent > /dev/null || ssh-agent > ~/.ssh/agent_config.sh
+  eval `cat ~/.ssh/agent_config.sh`
+fi
 
