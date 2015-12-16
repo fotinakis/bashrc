@@ -21,6 +21,8 @@ alias brc="vim ~/src/bashrc/init.sh"
 alias brcl="vim ~/src/bashrc/init-local.sh"
 alias src="source ~/.bashrc"
 alias k="kill %%"
+alias r="bundle exec rspec"
+alias beg="bundle exec guard"
 # Git.
 alias gca="git commit -a"
 alias gb="git branch"
