@@ -29,6 +29,7 @@ alias gb="git branch"
 alias gd="git diff"
 alias gch="git checkout"
 alias gpom="git pull origin master"
+alias gp="git pull"
 alias gs="git status"
 alias gbddd="git branch --merged | grep -v '\*' | grep -v '^  master$' | xargs -n 1 git branch -d"
 # Common repos.
