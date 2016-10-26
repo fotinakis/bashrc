@@ -27,6 +27,7 @@ alias beg="bundle exec guard"
 alias gca="git commit -a"
 alias gb="git branch"
 alias gd="git diff"
+alias gdc="git diff --cached"
 alias gch="git checkout"
 alias gpom="git pull origin master"
 alias gp="git pull"
@@ -35,6 +36,8 @@ alias gbddd="git branch --merged | grep -v '\*' | grep -v '^  master$' | xargs -
 # Common repos.
 alias s="cd ~/src"
 alias sb="cd ~/src/bashrc"
+# Misc.
+alias dc="docker-compose"
 
 # Eternal bash history.
 # ---------------------
