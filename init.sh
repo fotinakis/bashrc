@@ -60,7 +60,7 @@ stophistory () {
 }
 
 # Go path.
-export GOPATH=$HOME/go/
+export GOPATH=$HOME/src/go/
 export PATH=$PATH:$GOPATH/bin
 
 # Setup ssh-agent.
