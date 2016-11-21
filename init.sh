@@ -56,7 +56,7 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 shopt -s histappend
 stophistory () {
   PROMPT_COMMAND="bash_prompt_command"
-  echo 'History recording stopped.'
+  echo 'History recording stopped. Make sure to `kill -9 $$` at the end of the session.'
 }
 
 # Go path.
