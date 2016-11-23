@@ -35,6 +35,7 @@ alias gs="git status"
 alias gbddd="git branch --merged | grep -v '\*' | grep -v '^  master$' | xargs -n 1 git branch -d"
 # Common repos.
 alias s="cd ~/src"
+alias sgo="cd ~/src/go/src"
 alias sb="cd ~/src/bashrc"
 # Misc.
 alias dc="docker-compose"
