@@ -41,6 +41,7 @@ alias sgo="cd ~/src/go/src"
 alias sb="cd ~/src/bashrc"
 # Misc.
 alias dc="docker-compose"
+alias ember="./node_modules/ember-cli/bin/ember"
 
 # Eternal bash history.
 # ---------------------
