@@ -67,6 +67,9 @@ stophistory () {
 export GOPATH=$HOME/src/go/
 export PATH=$PATH:$GOPATH/bin
 
+# Yarn path.
+export PATH="$HOME/.yarn/bin:$PATH"
+
 # Setup ssh-agent.
 if [[ $OSTYPE == 'linux-gnu' ]]; then
   pgrep -f ssh-agent > /dev/null || ssh-agent > ~/.ssh/agent_config.sh
