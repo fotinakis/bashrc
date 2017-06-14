@@ -2,7 +2,6 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/crazy-prompt.sh
-source $DIR/alias-tab-completion.sh
 source $DIR/git-autocomplete.sh
 
 # Local, unversioned init.
@@ -75,3 +74,5 @@ if [[ $OSTYPE == 'linux-gnu' ]]; then
   eval `cat ~/.ssh/agent_config.sh`
 fi
 
+# Enable tab completion for aliases. Must come after everything else.
+source $DIR/alias-tab-completion.sh
