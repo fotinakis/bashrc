@@ -1,7 +1,9 @@
 #!/bin/bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source $DIR/crazy_prompt.sh
+source $DIR/crazy-prompt.sh
+source $DIR/alias-tab-completion.sh
+source $DIR/git-autocomplete.sh
 
 # Local, unversioned init.
 if [ -f $DIR/init-local.sh ]
