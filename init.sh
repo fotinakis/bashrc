@@ -76,3 +76,6 @@ fi
 
 # Enable tab completion for aliases. Must come after everything else.
 source $DIR/alias-tab-completion.sh
+
+# Turn off annoying mac message.
+export BASH_SILENCE_DEPRECATION_WARNING=1
