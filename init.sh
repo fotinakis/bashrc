@@ -70,8 +70,19 @@ export PATH=$PATH:$GOPATH/bin
 
 # Setup ssh-agent.
 if [[ $OSTYPE == 'linux-gnu' ]]; then
-  pgrep -f ssh-agent > /dev/null || ssh-agent > ~/.ssh/agent_config.sh
-  eval `cat ~/.ssh/agent_config.sh`
+  # Ensure the .ssh directory exists and has correct permissions
+  mkdir -p ~/.ssh
+  chmod 700 ~/.ssh
+
+  # Start agent only if it's not running OR if the config file is missing
+  if ! pgrep -x ssh-agent > /dev/null || [ ! -f ~/.ssh/agent_config.sh ]; then
+    ssh-agent -s > ~/.ssh/agent_config.sh 2>&1
+  fi
+
+  # Only evaluate if the file exists and is not empty
+  if [ -s ~/.ssh/agent_config.sh ]; then
+    eval "$(cat ~/.ssh/agent_config.sh)"
+  fi
 fi
 
 # Enable tab completion for aliases. Must come after everything else.
