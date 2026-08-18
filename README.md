@@ -1,5 +1,7 @@
-Just my own .bashrc.
+Just my own shell config.
 
 **Setup:**
 
-    mkdir -p ~/src; cd ~/src; git clone https://github.com/fotinakis/bashrc.git; echo -e "\nsource ~/src/bashrc/init.sh\n" >> ~/.bashrc; source ~/.bashrc
+```bash
+mkdir -p ~/src; cd ~/src; git clone https://github.com/fotinakis/bashrc.git; for f in ~/.bashrc ~/.zshrc; do echo -e "\nsource ~/src/bashrc/init.sh\n" >> $f; done
+```
