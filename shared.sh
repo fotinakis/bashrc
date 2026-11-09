@@ -61,3 +61,12 @@ if [[ $OSTYPE == 'linux-gnu' ]]; then
     eval "$(cat ~/.ssh/agent_config.sh)"
   fi
 fi
+
+# Merge shared Claude Code settings into ~/.claude/settings.json (run `claude-sync` to force).
+claude-sync() {
+  command -v python3 > /dev/null 2>&1 || return 0
+  python3 -I "$BASHRC_DIR/claude-settings-sync.py" && touch ~/.claude/.base-settings-stamp
+}
+if [ "$BASHRC_DIR/claude-base-settings.json" -nt ~/.claude/.base-settings-stamp ]; then
+  claude-sync
+fi
