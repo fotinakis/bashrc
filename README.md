@@ -7,9 +7,9 @@ Just my own shell config.
 mkdir -p ~/src
 [ -d ~/src/bashrc ] && git -C ~/src/bashrc pull || git clone https://github.com/fotinakis/bashrc.git ~/src/bashrc
 
-# 2. Point every shell startup file at it, skipping any that already are.
+# 2. Point the shell startup files at it, skipping any that already are.
 LINE='source ~/src/bashrc/init.sh'
-for f in ~/.bashrc ~/.bash_profile ~/.zshrc; do
+for f in ~/.bashrc ~/.zshrc; do
   touch "$f"
   grep -qxF "$LINE" "$f" || printf '\n%s\n' "$LINE" >> "$f"
 done
